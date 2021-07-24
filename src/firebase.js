@@ -1,12 +1,12 @@
 import firebase from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC5bDFzqfeMqbXDjDiErpbRy6i6E-415Bc",
-  authDomain: "twitter-clone-4561b.firebaseapp.com",
-  projectId: "twitter-clone-4561b",
-  storageBucket: "twitter-clone-4561b.appspot.com",
-  messagingSenderId: "326046460264",
-  appId: "1:326046460264:web:d2b9be2ec836fb82608edd",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGIN_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 export default firebase.initializeApp(firebaseConfig);
