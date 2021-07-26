@@ -1,1 +1,15 @@
-export default () => <span>Profile</span>;
+import { authService } from "MyBase";
+import { useHistory } from "react-router-dom";
+
+export default () => {
+  const history = useHistory();
+  const onLogOutClick = () => {
+    authService.signOut();
+    history.push("/");
+  };
+  return (
+    <>
+      <button onClick={onLogOutClick}>로그아웃</button>
+    </>
+  );
+};
