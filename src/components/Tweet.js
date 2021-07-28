@@ -28,17 +28,21 @@ const Tweet = ({ tweetObj, isOwner }) => {
     <div>
       {editing ? (
         <>
-          <form onSubmit={onSubmit}>
-            <input
-              type="text"
-              placeholder="수정할 내용을 적어주세요"
-              value={newTweet}
-              onChange={onChange}
-              required
-            />
-            <input type="submit" value="게시" />
-          </form>
-          <button onClick={toggleEditing}>취소</button>
+          {isOwner && (
+            <>
+              <form onSubmit={onSubmit}>
+                <input
+                  type="text"
+                  placeholder="수정할 내용을 적어주세요"
+                  value={newTweet}
+                  onChange={onChange}
+                  required
+                />
+                <input type="submit" value="게시" />
+              </form>
+              <button onClick={toggleEditing}>취소</button>
+            </>
+          )}
         </>
       ) : (
         <>
