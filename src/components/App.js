@@ -21,7 +21,6 @@ function App() {
       ) : (
         "Initializing..."
       )}
-      <footer>&copy; Twitter Clone {new Date().getFullYear()}</footer>
     </>
   );
 }
