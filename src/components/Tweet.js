@@ -1,13 +1,14 @@
-import { dbService } from "MyBase";
+import { dbService, storageService } from "MyBase";
 import { useState } from "react";
 
-const Tweet = ({ tweetObj, isOwner, attachmentUrl }) => {
+const Tweet = ({ tweetObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
   const [newTweet, setNewTweet] = useState(tweetObj.text);
   const onDeleteClick = async () => {
     const ok = window.confirm("정말 이 게시물을 삭제 하시겠습니까?");
     if (ok) {
       await dbService.doc(`tweets/${tweetObj.id}`).delete();
+      await storageService.refFromURL(tweetObj.attachmentUrl).delete();
     }
   };
   const toggleEditing = () => setEditing((prev) => !prev);
