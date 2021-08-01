@@ -1,8 +1,9 @@
 import { authService, dbService } from "MyBase";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 
-export default ({ userObj }) => {
+export default ({ userObj, refreshUser }) => {
+  const [newDisplayName, setNewDisplayName] = useState(userObj.displayName);
   const history = useHistory();
   const onLogOutClick = () => {
     authService.signOut();
@@ -19,8 +20,34 @@ export default ({ userObj }) => {
   useEffect(() => {
     getMyTweets();
   }, []);
+
+  const onChange = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setNewDisplayName(value);
+  };
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    if (userObj.displayName !== newDisplayName) {
+      await userObj.updateProfile({
+        displayName: newDisplayName,
+      });
+      refreshUser();
+    }
+  };
   return (
     <>
+      <form onSubmit={onSubmit}>
+        <input
+          type="text"
+          onChange={onChange}
+          placeholder="변경하실 이름을 적어주세요"
+          value={newDisplayName}
+        />
+        <input type="submit" value="이름 변경" />
+      </form>
       <button onClick={onLogOutClick}>로그아웃</button>
     </>
   );
