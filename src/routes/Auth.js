@@ -1,5 +1,6 @@
 import AuthForm from "components/AuthForm";
 import { authService, firebaseInstance } from "MyBase";
+import "./Auth.css";
 
 const Auth = () => {
   const onSocialClick = async (event) => {
@@ -16,17 +17,20 @@ const Auth = () => {
     console.log(data);
   };
   return (
-    <div>
-      <div>
+    <section id="auth">
+      <div className="auth-form">
+        <h1>로그인/회원가입</h1>
         <AuthForm />
-        <button onClick={onSocialClick} name="google">
-          구글계정으로 로그인하기
-        </button>
-        <button onClick={onSocialClick} name="github">
-          깃허브 계정으로 로그인하기
-        </button>
+        <div className="auth-auth-wrap">
+          <button id="auth-auth" onClick={onSocialClick} name="google">
+            구글계정으로 로그인하기
+          </button>
+          <button id="auth-auth" onClick={onSocialClick} name="github">
+            깃허브 계정으로 로그인하기
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Auth;

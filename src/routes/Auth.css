@@ -1,0 +1,37 @@
+#auth {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/LogoBackGround.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.auth-form {
+  width: 30%;
+  height: 80%;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  box-shadow: 0 2px 5px -1px rgba(50, 50, 93, 0.25),
+    0 1px 3px -1px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-auth-wrap {
+  display: flex;
+}
+
+#auth-auth {
+  width: 48%;
+  margin: 0px auto;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  background-color: white;
+  cursor: pointer;
+}

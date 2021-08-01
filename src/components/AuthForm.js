@@ -1,5 +1,6 @@
 import { authService } from "MyBase";
 import { useState } from "react";
+import "./AuthForm.css";
 
 const AuthForm = () => {
   const [error, setError] = useState("");
@@ -36,29 +37,37 @@ const AuthForm = () => {
   const toggleAccount = () => setNewAccount((prev) => !prev);
   return (
     <>
-      <form onSubmit={onSubmit}>
+      <form className="auth-wrap" onSubmit={onSubmit}>
+        <div className="auth-input-wrap">
+          <input
+            id="auth-input"
+            name="email"
+            type="text"
+            placeholder="Email"
+            required
+            value={email}
+            onChange={onChange}
+          />
+          <input
+            id="auth-input"
+            name="password"
+            type="password"
+            placeholder="Password"
+            required
+            value={password}
+            onChange={onChange}
+          />
+        </div>
+        <span id="auth-toggle" onClick={toggleAccount}>
+          {newAccount ? "로그인" : "계정이 없으신가요?"}
+        </span>
+        {error !== "" ? <h1 id="auth-error">{error}</h1> : null}
         <input
-          name="email"
-          type="text"
-          placeholder="Email"
-          required
-          value={email}
-          onChange={onChange}
+          id="auth-submitBtn"
+          type="submit"
+          value={newAccount ? "계정 만들기" : "로그인"}
         />
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          required
-          value={password}
-          onChange={onChange}
-        />
-        <input type="submit" value={newAccount ? "계정 만들기" : "로그인"} />
-        {error}
       </form>
-      <span onClick={toggleAccount}>
-        {newAccount ? "로그인" : "계정 만들기"}
-      </span>
     </>
   );
 };
