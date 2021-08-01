@@ -20,6 +20,7 @@ const TweetFactory = ({ userObj }) => {
       text: tweet,
       createdAt: Date.now(),
       creatorId: userObj.uid,
+      name: userObj.displayName,
       attachmentUrl,
     };
     await dbService.collection("tweets").add(tweetObj);

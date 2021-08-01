@@ -1,5 +1,7 @@
 import AuthForm from "components/AuthForm";
 import { authService, firebaseInstance } from "MyBase";
+import AuthGoogle from "../img/AuthGoogle.svg";
+import AuthGithub from "../img/AuthGithub.svg";
 import "./Auth.css";
 
 const Auth = () => {
@@ -23,10 +25,12 @@ const Auth = () => {
         <AuthForm />
         <div className="auth-auth-wrap">
           <button id="auth-auth" onClick={onSocialClick} name="google">
-            구글계정으로 로그인하기
+            <img id="auth-auth-img" src={AuthGoogle} />
+            구글계정으로 로그인
           </button>
           <button id="auth-auth" onClick={onSocialClick} name="github">
-            깃허브 계정으로 로그인하기
+            <img id="auth-auth-img" src={AuthGithub} />
+            깃허브 계정으로 로그인
           </button>
         </div>
       </div>

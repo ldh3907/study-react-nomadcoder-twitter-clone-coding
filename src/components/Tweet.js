@@ -48,6 +48,11 @@ const Tweet = ({ tweetObj, isOwner }) => {
       ) : (
         <>
           {" "}
+          {tweetObj.name !== null ? (
+            <h4>{tweetObj.name}</h4>
+          ) : (
+            <h4>이름없음</h4>
+          )}
           <h4>{tweetObj.text}</h4>
           {tweetObj.attachmentUrl && (
             <img src={tweetObj.attachmentUrl} width="50px" height="50px" />
