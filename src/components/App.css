@@ -6,6 +6,10 @@
   height: 100vh;
 }
 
+html {
+  background-color: #fbfbfb;
+}
+
 :root {
   --main_color: #402597;
 }

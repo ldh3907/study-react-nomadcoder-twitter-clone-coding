@@ -17,9 +17,11 @@ const TweetFactory = ({ userObj, togglePost }) => {
       attachmentUrl = await response.ref.getDownloadURL();
     }
 
+    let time = new Date();
+
     const tweetObj = {
       text: tweet,
-      createdAt: Date.now(),
+      createdAt: time.toLocaleDateString(),
       creatorId: userObj.uid,
       name: userObj.displayName,
       attachmentUrl,

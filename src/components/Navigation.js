@@ -8,7 +8,7 @@ import Logo from "../img/Logo.svg";
 import Profile from "../img/Profile.svg";
 
 const Navigation = ({ userObj }) => {
-  const [currentSection, setCurrentSection] = useState();
+  const [currentSection, setCurrentSection] = useState(true);
   const [isPost, setIsPost] = useState(false);
 
   const changeSection = (event) => {
@@ -53,12 +53,12 @@ const Navigation = ({ userObj }) => {
           ) : null}
           <li onClick={changeSection}>
             <Link name="home" to="/" className="navigation-item">
-              <img src={Home} />홈
+              <img src={Home} name="home" />홈
             </Link>
           </li>
           <li onClick={changeSection}>
             <Link name="profile" to="/profile" className="navigation-item">
-              <img src={Profile} />
+              <img src={Profile} name="profile" />
               {userObj.displayName}님의 프로필
             </Link>
           </li>

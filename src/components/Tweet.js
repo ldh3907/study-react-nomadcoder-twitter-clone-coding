@@ -1,5 +1,8 @@
 import { dbService, storageService } from "MyBase";
 import { useState } from "react";
+import "./Tweet.css";
+import Delete from "../img/Delete.svg";
+import Edit from "../img/Edit.svg";
 
 const Tweet = ({ tweetObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
@@ -26,45 +29,58 @@ const Tweet = ({ tweetObj, isOwner }) => {
     setNewTweet(value);
   };
   return (
-    <div>
+    <div className="tweet-form">
+      <div className="tweet-top-wrap">
+        {tweetObj.name !== null ? (
+          <h4 id="tweet-name">{tweetObj.name}</h4>
+        ) : (
+          <h4 id="tweet-name">이름없음</h4>
+        )}
+        {editing
+          ? null
+          : isOwner && (
+              <div className="tweet-btn-wrap">
+                <button onClick={onDeleteClick}>
+                  <img id="tweet-btn-img" src={Delete} alt="삭제" />
+                </button>
+                <button onClick={toggleEditing}>
+                  <img id="tweet-btn-img" src={Edit} alt="수정" />
+                </button>
+              </div>
+            )}
+      </div>
       {editing ? (
         <>
           {isOwner && (
             <>
-              <form onSubmit={onSubmit}>
-                <input
-                  type="text"
-                  placeholder="수정할 내용을 적어주세요"
-                  value={newTweet}
-                  onChange={onChange}
-                  required
-                />
-                <input type="submit" value="게시" />
-              </form>
-              <button onClick={toggleEditing}>취소</button>
+              <div id="tweet-edit-wrap">
+                <form onSubmit={onSubmit}>
+                  <input
+                    id="tweet-text-input"
+                    type="text"
+                    placeholder="수정할 내용을 적어주세요"
+                    value={newTweet}
+                    onChange={onChange}
+                    required
+                  />
+                  <input type="submit" value="수정" />
+                </form>
+                <button onClick={toggleEditing}>취소</button>
+              </div>
             </>
           )}
         </>
       ) : (
         <>
-          {" "}
-          {tweetObj.name !== null ? (
-            <h4>{tweetObj.name}</h4>
-          ) : (
-            <h4>이름없음</h4>
-          )}
-          <h4>{tweetObj.text}</h4>
-          {tweetObj.attachmentUrl && (
-            <img src={tweetObj.attachmentUrl} width="50px" height="50px" />
-          )}
-          {isOwner && (
-            <>
-              <button onClick={onDeleteClick}>삭제</button>
-              <button onClick={toggleEditing}>수정</button>
-            </>
-          )}
+          <div className="tweet-content-wrap">
+            <h4 id="tweet-text">{tweetObj.text}</h4>
+            {tweetObj.attachmentUrl && (
+              <img src={tweetObj.attachmentUrl} className="tweet-img" />
+            )}
+          </div>
         </>
       )}
+      <h4 id="tweet-date">{tweetObj.createdAt}</h4>
     </div>
   );
 };
