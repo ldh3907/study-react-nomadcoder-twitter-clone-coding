@@ -15,7 +15,7 @@ export default ({ userObj, refreshUser }) => {
       .where("creatorId", "==", userObj.uid)
       .orderBy("createdAt", "desc")
       .get();
-    console.log(tweets.docs.map((doc) => doc.data()));
+    // console.log(tweets.docs.map((doc) => doc.data()));
   };
   useEffect(() => {
     getMyTweets();

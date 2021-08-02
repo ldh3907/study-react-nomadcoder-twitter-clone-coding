@@ -1,0 +1,35 @@
+#tweetFactoty-form-wrap {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  overflow: hidden;
+  top: 0px;
+  background-color: rgba(238, 238, 238, 0.9);
+}
+#tweetFactory-form {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 370px;
+  left: 790px;
+  z-index: 9999;
+  width: 510px;
+  height: 570px;
+  background-color: #534974;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px -1px rgba(50, 50, 93, 0.25),
+    0 1px 3px -1px rgba(0, 0, 0, 0.3);
+}
+
+.tweetFactory-top-wrap {
+  display: flex;
+}
+
+#tweetFactory-title {
+  color: white;
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0px;
+}
