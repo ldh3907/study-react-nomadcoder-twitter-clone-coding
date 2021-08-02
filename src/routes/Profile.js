@@ -39,16 +39,18 @@ export default ({ userObj, refreshUser }) => {
   };
   return (
     <>
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          onChange={onChange}
-          placeholder="변경하실 이름을 적어주세요"
-          value={newDisplayName}
-        />
-        <input type="submit" value="이름 변경" />
-      </form>
-      <button onClick={onLogOutClick}>로그아웃</button>
+      <section id="profile">
+        <form onSubmit={onSubmit}>
+          <input
+            type="text"
+            onChange={onChange}
+            placeholder="변경하실 이름을 적어주세요"
+            value={newDisplayName}
+          />
+          <input type="submit" value="이름 변경" />
+        </form>
+        <button onClick={onLogOutClick}>로그아웃</button>
+      </section>
     </>
   );
 };

@@ -2,6 +2,7 @@ import Tweet from "components/Tweet";
 import { dbService } from "MyBase";
 import { useEffect, useState } from "react";
 import TweetFactory from "components/TweetFactory";
+import "./Home.css";
 
 const Home = ({ userObj }) => {
   const [tweets, setTweets] = useState([]);
@@ -17,7 +18,7 @@ const Home = ({ userObj }) => {
   }, []);
 
   return (
-    <div>
+    <section id="home">
       <TweetFactory userObj={userObj} />
       <div>
         {tweets.map((tweet) => (
@@ -28,7 +29,7 @@ const Home = ({ userObj }) => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
