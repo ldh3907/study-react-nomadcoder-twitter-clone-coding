@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/study-react-nomadcoder-twitter-clone-coding/static/css/main.69fe9471.chunk.css",
-    "main.js": "/study-react-nomadcoder-twitter-clone-coding/static/js/main.a34bb767.chunk.js",
-    "main.js.map": "/study-react-nomadcoder-twitter-clone-coding/static/js/main.a34bb767.chunk.js.map",
+    "main.css": "/study-react-nomadcoder-twitter-clone-coding/static/css/main.d7d95d93.chunk.css",
+    "main.js": "/study-react-nomadcoder-twitter-clone-coding/static/js/main.f2161e08.chunk.js",
+    "main.js.map": "/study-react-nomadcoder-twitter-clone-coding/static/js/main.f2161e08.chunk.js.map",
     "runtime-main.js": "/study-react-nomadcoder-twitter-clone-coding/static/js/runtime-main.d263368d.js",
     "runtime-main.js.map": "/study-react-nomadcoder-twitter-clone-coding/static/js/runtime-main.d263368d.js.map",
     "static/js/2.b72267ca.chunk.js": "/study-react-nomadcoder-twitter-clone-coding/static/js/2.b72267ca.chunk.js",
     "static/js/2.b72267ca.chunk.js.map": "/study-react-nomadcoder-twitter-clone-coding/static/js/2.b72267ca.chunk.js.map",
     "index.html": "/study-react-nomadcoder-twitter-clone-coding/index.html",
-    "static/css/main.69fe9471.chunk.css.map": "/study-react-nomadcoder-twitter-clone-coding/static/css/main.69fe9471.chunk.css.map",
+    "static/css/main.d7d95d93.chunk.css.map": "/study-react-nomadcoder-twitter-clone-coding/static/css/main.d7d95d93.chunk.css.map",
     "static/js/2.b72267ca.chunk.js.LICENSE.txt": "/study-react-nomadcoder-twitter-clone-coding/static/js/2.b72267ca.chunk.js.LICENSE.txt",
     "static/media/AuthGithub.146e30eb.svg": "/study-react-nomadcoder-twitter-clone-coding/static/media/AuthGithub.146e30eb.svg",
     "static/media/AuthGoogle.bbce75f8.svg": "/study-react-nomadcoder-twitter-clone-coding/static/media/AuthGoogle.bbce75f8.svg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.d263368d.js",
     "static/js/2.b72267ca.chunk.js",
-    "static/css/main.69fe9471.chunk.css",
-    "static/js/main.a34bb767.chunk.js"
+    "static/css/main.d7d95d93.chunk.css",
+    "static/js/main.f2161e08.chunk.js"
   ]
 }
