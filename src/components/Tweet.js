@@ -3,6 +3,8 @@ import { useState } from "react";
 import "./Tweet.css";
 import Delete from "../img/Delete.svg";
 import Edit from "../img/Edit.svg";
+import Modify from "../img/Modify.svg";
+import Cancle from "../img/Cancle.svg";
 
 const Tweet = ({ tweetObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
@@ -63,9 +65,15 @@ const Tweet = ({ tweetObj, isOwner }) => {
                     onChange={onChange}
                     required
                   />
-                  <input type="submit" value="수정" />
+                  <div id="tweet-edit-btn-wrap">
+                    <button type="submit" value="수정">
+                      <img id="tweet-edit-btn-img" src={Modify} />
+                    </button>
+                    <button onClick={toggleEditing}>
+                      <img id="tweet-edit-btn-img" src={Cancle} />
+                    </button>
+                  </div>
                 </form>
-                <button onClick={toggleEditing}>취소</button>
               </div>
             </>
           )}
