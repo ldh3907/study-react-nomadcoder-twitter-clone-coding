@@ -1,0 +1,58 @@
+#profile {
+  margin-top: 130px;
+  height: 70%;
+}
+
+#profile-form {
+  width: 510px;
+  height: 550px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 2px 5px -1px rgba(50, 50, 93, 0.25),
+    0 1px 3px -1px rgba(0, 0, 0, 0.3);
+  margin: 0px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#profile-rename-wrap {
+}
+
+#profile-top-wrap {
+  display: flex;
+  align-items: center;
+}
+
+#tweet-rename-btn {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#profile-logOut-btn {
+  margin-top: auto;
+  margin-left: auto;
+  width: 120px;
+  height: 50px;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#profile-logOut-btn:hover {
+  transition: 1s;
+  font-weight: bold;
+  background-color: rgb(233, 90, 90);
+}
