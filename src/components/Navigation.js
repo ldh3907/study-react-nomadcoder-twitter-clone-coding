@@ -66,7 +66,11 @@ const Navigation = ({ userObj }) => {
       </nav>
       {isPost ? (
         currentSection ? (
-          <TweetFactory userObj={userObj} togglePost={togglePost} />
+          <TweetFactory
+            setIsPost={setIsPost}
+            userObj={userObj}
+            togglePost={togglePost}
+          />
         ) : null
       ) : null}
     </>

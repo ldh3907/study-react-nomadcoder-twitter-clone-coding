@@ -5,7 +5,7 @@ import "./TweetFactory.css";
 import Cancle from "../img/Cancle.svg";
 import Tweet from "../img/Tweet.svg";
 
-const TweetFactory = ({ userObj, togglePost }) => {
+const TweetFactory = ({ userObj, togglePost, setIsPost }) => {
   const [tweet, setTweet] = useState("");
   const [attachment, setAttachment] = useState("");
   const onSubmit = async (event) => {
@@ -31,6 +31,7 @@ const TweetFactory = ({ userObj, togglePost }) => {
     await dbService.collection("tweets").add(tweetObj);
     setTweet("");
     setAttachment("");
+    setIsPost(false);
   };
   const onChange = (event) => {
     const {
