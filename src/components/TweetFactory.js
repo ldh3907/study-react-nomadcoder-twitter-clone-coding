@@ -29,9 +29,9 @@ const TweetFactory = ({ userObj, togglePost, setIsPost }) => {
       attachmentUrl,
     };
     await dbService.collection("tweets").add(tweetObj);
+    setIsPost(false);
     setTweet("");
     setAttachment("");
-    setIsPost(false);
   };
   const onChange = (event) => {
     const {

@@ -14,8 +14,8 @@
 #tweetFactory-form {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 370px;
-  left: 790px;
+  top: 40%;
+  left: 50%;
   z-index: 9999;
   width: 510px;
   height: 570px;
