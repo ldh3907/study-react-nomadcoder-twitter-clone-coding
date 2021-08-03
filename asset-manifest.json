@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/study-react-nomadcoder-twitter-clone-coding/static/css/main.69fe9471.chunk.css",
+    "main.js": "/study-react-nomadcoder-twitter-clone-coding/static/js/main.a34bb767.chunk.js",
+    "main.js.map": "/study-react-nomadcoder-twitter-clone-coding/static/js/main.a34bb767.chunk.js.map",
+    "runtime-main.js": "/study-react-nomadcoder-twitter-clone-coding/static/js/runtime-main.d263368d.js",
+    "runtime-main.js.map": "/study-react-nomadcoder-twitter-clone-coding/static/js/runtime-main.d263368d.js.map",
+    "static/js/2.b72267ca.chunk.js": "/study-react-nomadcoder-twitter-clone-coding/static/js/2.b72267ca.chunk.js",
+    "static/js/2.b72267ca.chunk.js.map": "/study-react-nomadcoder-twitter-clone-coding/static/js/2.b72267ca.chunk.js.map",
+    "index.html": "/study-react-nomadcoder-twitter-clone-coding/index.html",
+    "static/css/main.69fe9471.chunk.css.map": "/study-react-nomadcoder-twitter-clone-coding/static/css/main.69fe9471.chunk.css.map",
+    "static/js/2.b72267ca.chunk.js.LICENSE.txt": "/study-react-nomadcoder-twitter-clone-coding/static/js/2.b72267ca.chunk.js.LICENSE.txt",
+    "static/media/AuthGithub.146e30eb.svg": "/study-react-nomadcoder-twitter-clone-coding/static/media/AuthGithub.146e30eb.svg",
+    "static/media/AuthGoogle.bbce75f8.svg": "/study-react-nomadcoder-twitter-clone-coding/static/media/AuthGoogle.bbce75f8.svg",
+    "static/media/Cancle.3f65a286.svg": "/study-react-nomadcoder-twitter-clone-coding/static/media/Cancle.3f65a286.svg",
+    "static/media/Delete.d9483b20.svg": "/study-react-nomadcoder-twitter-clone-coding/static/media/Delete.d9483b20.svg",
+    "static/media/Edit.2fa16508.svg": "/study-react-nomadcoder-twitter-clone-coding/static/media/Edit.2fa16508.svg",
+    "static/media/Home.5bb3d522.svg": "/study-react-nomadcoder-twitter-clone-coding/static/media/Home.5bb3d522.svg",
+    "static/media/Logo.4b19ecc2.svg": "/study-react-nomadcoder-twitter-clone-coding/static/media/Logo.4b19ecc2.svg",
+    "static/media/Auth.css": "/study-react-nomadcoder-twitter-clone-coding/static/media/LogoBackGround.fb791c79.svg",
+    "static/media/Modify.1d3a1d0c.svg": "/study-react-nomadcoder-twitter-clone-coding/static/media/Modify.1d3a1d0c.svg",
+    "static/media/Profile.78b64d9f.svg": "/study-react-nomadcoder-twitter-clone-coding/static/media/Profile.78b64d9f.svg",
+    "static/media/Tweet.19250efd.svg": "/study-react-nomadcoder-twitter-clone-coding/static/media/Tweet.19250efd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d263368d.js",
+    "static/js/2.b72267ca.chunk.js",
+    "static/css/main.69fe9471.chunk.css",
+    "static/js/main.a34bb767.chunk.js"
+  ]
+}
