@@ -2,6 +2,8 @@ import { dbService, storageService } from "MyBase";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./TweetFactory.css";
+import Cancle from "../img/Cancle.svg";
+import Tweet from "../img/Tweet.svg";
 
 const TweetFactory = ({ userObj, togglePost }) => {
   const [tweet, setTweet] = useState("");
@@ -56,23 +58,46 @@ const TweetFactory = ({ userObj, togglePost }) => {
       <form id="tweetFactory-form" onSubmit={onSubmit}>
         <div className="tweetFactory-top-wrap">
           <h1 id="tweetFactory-title">질문을 마음껏 작성해주세요 :)</h1>
-          <button onClick={togglePost} />
+          <button id="tweetFactory-delete-btn" onClick={togglePost}>
+            <img id="tweetFactory-delete-btn-img" src={Cancle} />
+          </button>
         </div>
         <input
+          id="tweetFactory-text-input"
           type="text"
-          placeholder="무슨 생각을 하고 계신가요?"
+          placeholder="내용을 적어주세요."
           maxLength={120}
           value={tweet}
           onChange={onChange}
         />
-        <input type="file" accept="image/*" onChange={onFileChange} />
-        <input type="submit" value="게시" />
-        {attachment && (
-          <div>
-            <img src={attachment} width="50px" height="50px" />
-            <button onClick={onClearAttachment}>삭제</button>
-          </div>
-        )}
+        <div className="tweetFactory-bottom-wrap">
+          <label for="tweetFactory-file-input">
+            사진추가
+            <img src={Tweet} />
+          </label>
+          <input
+            id="tweetFactory-file-input"
+            type="file"
+            accept="image/*"
+            onChange={onFileChange}
+          />
+          {attachment && (
+            <div id="tweetFactory-preview-wrap">
+              <img
+                src={attachment}
+                id="tweetFactory-preview-img"
+                height="50px"
+              />
+              <button
+                id="tweetFactory-preview-delete-btn"
+                onClick={onClearAttachment}
+              >
+                <img src={Cancle} />
+              </button>
+            </div>
+          )}
+          <input id="tweetFactory-tweet-btn" type="submit" value="게시" />
+        </div>
       </form>
     </div>
   );
