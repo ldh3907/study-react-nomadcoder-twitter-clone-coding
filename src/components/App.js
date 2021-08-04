@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import AppRouter from "./Router";
 import { authService } from "../MyBase";
+import Loader from "./Loader";
 
 function App() {
   const [init, setInit] = useState(false);
@@ -37,7 +38,7 @@ function App() {
           refreshUser={refreshUser}
         />
       ) : (
-        "Initializing..."
+        <Loader />
       )}
     </>
   );
